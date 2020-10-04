@@ -1,0 +1,60 @@
+﻿/*html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #eee;
+}
+
+.navbar {
+    font-size: 16px;
+    background-color: #fff;
+    border-color: #fff;
+    margin-bottom: 0px;
+    border-radius: unset;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color: #212121;
+}
+
+.nav > li:hover {
+    color: #fff;
+    background-color: orangered;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #337ab7;
+    font-weight: 600;
+}
+
+.navbar-inverse .navbar-brand:hover{
+    color: #337ab7;
+}*/
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column */
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/*set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
