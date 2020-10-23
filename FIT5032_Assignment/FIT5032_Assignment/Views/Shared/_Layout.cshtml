@@ -23,8 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About Mental Health", "About", "Home")</li>
-                    <li>@Html.ActionLink("Story Sharing", "Story", "Home")</li>
-                    <li>@Html.ActionLink("Hospital Booking", "Booking", "Home")</li>
+                    <li>@Html.ActionLink("Story Sharing", "Index", "Stories")</li>
+                    @*name view controller*@
+                    <li>@Html.ActionLink("Hospital", "Index", "Hospitals")</li>
+                    <li>@Html.ActionLink("Hospital Booking", "Index", "Bookings")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

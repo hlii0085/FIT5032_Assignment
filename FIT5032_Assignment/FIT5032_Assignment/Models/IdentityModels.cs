@@ -20,6 +20,12 @@ namespace FIT5032_Assignment.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Hospital> Hospitals { get; set; }
+
+        public DbSet<Story> Stories { get; set; }
+
+        public DbSet<Booking> Bookings { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
