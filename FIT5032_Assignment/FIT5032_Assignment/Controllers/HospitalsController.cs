@@ -17,7 +17,15 @@ namespace FIT5032_Assignment.Controllers
         // GET: Hospitals
         public ActionResult Index()
         {
-            return View(db.Hospitals.ToList());
+            if(User.IsInRole("Admin"))
+            {
+                return View("Index", db.Hospitals.ToList());
+            }
+            else
+            {
+                return View("CustomerIndex", db.Hospitals.ToList());
+            }
+            
         }
 
         // GET: Hospitals/Details/5
