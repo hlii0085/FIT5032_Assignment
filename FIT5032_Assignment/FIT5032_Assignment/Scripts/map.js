@@ -35,7 +35,28 @@ function initMap() {
         geodoceAddress(geocoder, map, hospitals[i]);
     }
 
+    //auto completion
+    const input = document.getElementById("start");
+    autoComplete(input, map);
 
+    //get direction
+    const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+
+    directionsRenderer.setMap(map);
+
+    var getDirection = document.getElementById("get-direction");
+    getDirection.addEventListener("click", function () {
+        calculateAndDisplayRoute(directionsService, directionsRenderer);
+    });
+
+
+}
+
+function autoComplete(input, map) {
+    const autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.setTypes(["address"]);
+    autocomplete.bindTo("bounds", map);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -66,4 +87,27 @@ function geodoceAddress(geocoder, map, hospital) {
             })
         }
     })
+}
+
+
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    directionsService.route(
+        {
+            origin: {
+                query: document.getElementById("start").value,
+            },
+            destination: {
+                query: document.getElementById("end").value,
+            },
+            travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (response, status) => {
+            if (status === "OK") {
+                directionsRenderer.setDirections(response);
+            } else {
+                window.alert("Directions request failed due to " + status);
+            }
+        }
+    );
 }

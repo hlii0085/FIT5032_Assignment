@@ -6,16 +6,46 @@
 }
 <head>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKNQw83EpnMJdVClTbGKnIR3I0Uw9hJRw&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKNQw83EpnMJdVClTbGKnIR3I0Uw9hJRw&callback=initMap&libraries=places&v=weekly" defer></script>
     <style>
         #map {
             height: 500px;
+        }
+
+        #floating-panel {
+            position: absolute;
+            top: 120px;
+            left: 30%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: "Roboto", "sans-serif";
+            line-height: 30px;
+            padding-left: 10px;
         }
     </style>
 </head>
 
 <body>
     <h2>Customer Index</h2>
+
+    <div id="floating-panel">
+        <label for="start"><b>Start: </b></label>
+        <input id="start" type="text" placeholder="Please enter your location" />
+        
+        <label for="end"><b>End: </b></label>
+        <select id="end">
+            @foreach (var item in Model)
+            {
+                <option value="@item.Address">@item.HospitalName</option>
+            }
+
+
+        </select>
+        <button id="get-direction">Search</button>
+    </div>
 
     <div id="map"></div>
 
