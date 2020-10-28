@@ -32,6 +32,13 @@ namespace FIT5032_Assignment.Controllers
             ViewBag.Message = "Your booking page.";
 
             return View();
-        }  
+        }
+
+        public ActionResult Painting()
+        {
+            ViewBag.Message = "Painting page.";
+
+            return View();
+        }
     }
 }

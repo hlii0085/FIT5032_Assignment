@@ -13,13 +13,7 @@ namespace FIT5032_Assignment.Models
 
         public string Description { get; set; }
 
-        public string Lattitude { get; set; }
-
-        public string Longitude { get; set; }
-
         public string Address { get; set; }
-
-        public int PostCode { get; set; }
 
         public float Rating { get; set; }
 

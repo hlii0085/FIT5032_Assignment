@@ -17,7 +17,7 @@ namespace FIT5032_Assignment.Controllers
         // GET: Hospitals
         public ActionResult Index()
         {
-            if(User.IsInRole("Admin"))
+            if (User.IsInRole("Admin"))
             {
                 return View("Index", db.Hospitals.ToList());
             }
@@ -25,8 +25,9 @@ namespace FIT5032_Assignment.Controllers
             {
                 return View("CustomerIndex", db.Hospitals.ToList());
             }
-            
+
         }
+
 
         // GET: Hospitals/Details/5
         public ActionResult Details(int? id)
@@ -54,7 +55,7 @@ namespace FIT5032_Assignment.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,HospitalName,Description,Lattitude,Longitude,Address,PostCode,Rating")] Hospital hospital)
+        public ActionResult Create([Bind(Include = "Id,HospitalName,Description,Address,Rating")] Hospital hospital)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace FIT5032_Assignment.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,HospitalName,Description,Lattitude,Longitude,Address,PostCode,Rating")] Hospital hospital)
+        public ActionResult Edit([Bind(Include = "Id,HospitalName,Description,Address,Rating")] Hospital hospital)
         {
             if (ModelState.IsValid)
             {
@@ -122,6 +123,13 @@ namespace FIT5032_Assignment.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public JsonResult GetHospitals()
+        {
+            var hospitals = db.Hospitals.ToList();
+            return new JsonResult { Data = hospitals, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
 
         protected override void Dispose(bool disposing)
         {

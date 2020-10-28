@@ -1,6 +1,7 @@
 ﻿using FIT5032_Assignment.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -84,6 +85,28 @@ namespace FIT5032_Assignment.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //public class EmailProcessing
+        //{
+        //    private const String API_KEY = "";
+
+        //    public void Send(String toEmail, String subject, String contents)
+        //    {
+        //        var client = new SendGridClient(API_KEY);
+        //        var from = new EmailAddress("lihaoxing0827@gmail.com", "HAOXING LI EMAIL");
+        //        var to = new EmailAddress(toEmail, "");
+        //        var plainTextContent = contents;
+        //        var htmlContent = "<p>" + contents + "</p>";
+        //        var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+        //        var response = client.SendEmailAsync(msg);
+        //    }
+        //}
+
+        //EmailProcessing emailHandling = new EmailProcessing();
+        //string emailSubject = "You have Successfully Booking " + model.hospitalName;
+        //string emailBody = "<div><h2> Hospital Name: </h2><span> " + model.hospitalName + " </span></div>"
+        //                    + "<div><h2> Booking Time: </h2><span> " + model.bookingTime + " </span></div>";
+        //emailHandling.Send(user.Identity.GetUserName(), emailSubject, emailBody);
 
     }
 }

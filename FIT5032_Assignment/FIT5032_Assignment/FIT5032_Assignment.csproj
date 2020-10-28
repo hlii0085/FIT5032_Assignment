@@ -198,6 +198,10 @@
     <Compile Include="Migrations\202010231531445_BookingsModel.Designer.cs">
       <DependentUpon>202010231531445_BookingsModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010271542170_HospitalUpdates.cs" />
+    <Compile Include="Migrations\202010271542170_HospitalUpdates.Designer.cs">
+      <DependentUpon>202010271542170_HospitalUpdates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Booking.cs" />
@@ -229,6 +233,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\map.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -265,11 +270,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Booking.cshtml" />
-    <Content Include="Views\Hospitals\Create.cshtml" />
-    <Content Include="Views\Hospitals\Delete.cshtml" />
-    <Content Include="Views\Hospitals\Details.cshtml" />
-    <Content Include="Views\Hospitals\Edit.cshtml" />
-    <Content Include="Views\Hospitals\Index.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Stories\Create.cshtml" />
@@ -287,6 +287,12 @@
     <Content Include="Views\UserRoles\GetUserRoles.cshtml" />
     <Content Include="Views\UserRoles\DeleteUserRole.cshtml" />
     <Content Include="Views\UserRoles\Index.cshtml" />
+    <Content Include="Views\Home\Painting.cshtml" />
+    <Content Include="Views\Hospitals\Create.cshtml" />
+    <Content Include="Views\Hospitals\Delete.cshtml" />
+    <Content Include="Views\Hospitals\Details.cshtml" />
+    <Content Include="Views\Hospitals\Edit.cshtml" />
+    <Content Include="Views\Hospitals\Index.cshtml" />
     <Content Include="Views\Hospitals\CustomerIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010231531445_BookingsModel.resx">
       <DependentUpon>202010231531445_BookingsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010271542170_HospitalUpdates.resx">
+      <DependentUpon>202010271542170_HospitalUpdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

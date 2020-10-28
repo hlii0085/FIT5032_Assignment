@@ -220,3 +220,4 @@ C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assign
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.StoryModel.resources
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.StoryModelChange.resources
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.BookingsModel.resources
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.HospitalUpdates.resources
