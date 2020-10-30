@@ -22,9 +22,19 @@ namespace FIT5032_Assignment
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
+                      "~/Scripts/DataTables/jquery.datatables.js",
+                      "~/Scripts/DataTables/datatables.bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/calendar").Include(
+                      "~/Scripts/moment.js",
+                      "~/Scripts/fullcalendar.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/DataTables/css/dataTables.bootstrap.css",
+                      "~/Content/fullcalendar.css"));
         }
     }
 }

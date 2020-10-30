@@ -6,6 +6,10 @@ xmlHttp.send();
 var hospitals = JSON.parse(xmlHttp.responseText);
 //console.log(hospitals);
 
+window.onload = function () {
+    alert("hhh");
+}
+
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -34.397, lng: 150.644 },
@@ -46,9 +50,15 @@ function initMap() {
     directionsRenderer.setMap(map);
 
     var getDirection = document.getElementById("get-direction");
-    getDirection.addEventListener("click", function () {
-        calculateAndDisplayRoute(directionsService, directionsRenderer);
-    });
+    getDirection.onclick = function () {
+        alert("hhh");
+    };
+
+    //    addEventListener("click", function () {
+    //    alert("hhh");
+    //    calculateAndDisplayRoute(directionsService, directionsRenderer);
+       
+    //});
 
 
 }
