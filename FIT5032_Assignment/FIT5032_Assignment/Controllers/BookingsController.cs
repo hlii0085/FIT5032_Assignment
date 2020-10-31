@@ -120,6 +120,21 @@ namespace FIT5032_Assignment.Controllers
             return RedirectToAction("Index");
         }
 
+        //GET BOOKING/ID
+        public ActionResult BookingByHospital(int id)
+        {
+            ViewBag.hospital = db.Hospitals.FirstOrDefault(b => b.Id == id);
+            var bookings = db.Bookings.Include(be => be.Hospital).Where(be => be.HospitalId == id).ToList();
+            return View(bookings);
+        }
+
+        //GET BOOKING/ID
+        public JsonResult GetBookingsByHospital(int id)
+        {
+            var bookings = db.Bookings.Include(be => be.Hospital).Where(be => be.HospitalId == id).ToList();
+            return new JsonResult { Data = bookings, JsonRequestBehavior = JsonRequestBehavior.AllowGet};
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

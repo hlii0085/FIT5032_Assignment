@@ -26,6 +26,8 @@ namespace FIT5032_Assignment.Models
 
         public DbSet<Booking> Bookings { get; set; }
 
+        public DbSet<BookEvent> BookEvents { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

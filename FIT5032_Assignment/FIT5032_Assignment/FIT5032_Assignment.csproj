@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookEventsController.cs" />
     <Compile Include="Controllers\BookingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HospitalsController.cs" />
@@ -202,8 +203,21 @@
     <Compile Include="Migrations\202010271542170_HospitalUpdates.Designer.cs">
       <DependentUpon>202010271542170_HospitalUpdates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010310901526_BookEventModel.cs" />
+    <Compile Include="Migrations\202010310901526_BookEventModel.Designer.cs">
+      <DependentUpon>202010310901526_BookEventModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010310917189_removeBook.cs" />
+    <Compile Include="Migrations\202010310917189_removeBook.Designer.cs">
+      <DependentUpon>202010310917189_removeBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010310918152_reBook.cs" />
+    <Compile Include="Migrations\202010310918152_reBook.Designer.cs">
+      <DependentUpon>202010310918152_reBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BookEvent.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Hospital.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -388,6 +402,7 @@
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Calendar.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap4.js" />
@@ -631,6 +646,8 @@
     <Content Include="Views\Hospitals\Edit.cshtml" />
     <Content Include="Views\Hospitals\Index.cshtml" />
     <Content Include="Views\Hospitals\CustomerIndex.cshtml" />
+    <Content Include="Views\Bookings\BookingByHospital.cshtml" />
+    <Content Include="Views\BookEvents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -666,6 +683,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010271542170_HospitalUpdates.resx">
       <DependentUpon>202010271542170_HospitalUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310901526_BookEventModel.resx">
+      <DependentUpon>202010310901526_BookEventModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310917189_removeBook.resx">
+      <DependentUpon>202010310917189_removeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310918152_reBook.resx">
+      <DependentUpon>202010310918152_reBook.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

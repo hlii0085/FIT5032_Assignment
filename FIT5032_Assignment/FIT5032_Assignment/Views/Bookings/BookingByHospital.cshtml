@@ -1,0 +1,85 @@
+﻿@model IEnumerable<FIT5032_Assignment.Models.Booking>
+
+@{
+    ViewBag.Title = "BookingByHospital";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var hospital = ViewBag.hospital;
+}
+
+<h2>BookingByHospital</h2>
+
+<div class="row">
+    <div class="col-md-9" id="calendar"></div>
+    <div class="col-md-3">
+        <h2 id="name"></h2>
+        <p id="desc"></p>
+        <h3 id="time"></h3>
+        <a id="book"></a>
+    </div>
+</div>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital.HospitalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hospital.HospitalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    <script src="~/Scripts/Calendar.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var events = [];
+
+            $.ajax({
+                type: "GET",
+                url: "/Bookings/GetBookingsByHospital/@hospital.Id",
+                success: function (data) {
+                    $.each(data, function (i, v) {
+                        events.push({
+                            eventId: v.Id,
+                            title: v.Hospital.HospitalName,
+                            description: v.Hospital.Description,
+                            start: moment(v.Time)
+                        })
+                    });
+                    generateCalendar(events);
+                },
+                error: function (error) {
+                    alert("Failed to get data");
+                }
+            })
+
+        })
+
+
+    </script>
+}
