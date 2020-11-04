@@ -224,3 +224,8 @@ C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assign
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.BookEventModel.resources
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.removeBook.resources
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.reBook.resources
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\SendGrid.dll
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\StarkbankEcdsa.dll
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\SendGrid.pdb
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\SendGrid.xml
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.addValidation.resources

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FIT5032_Assignment.Models;
+using FIT5032_Assignment.Utils;
 
 namespace FIT5032_Assignment.Controllers
 {
@@ -86,6 +87,17 @@ namespace FIT5032_Assignment.Controllers
         {
             if (ModelState.IsValid)
             {
+                var bookH = db.BookEvents.Include(be => be.ApplicationUser).Where(be => be.Booking.Id == booking.Id).ToList();
+                List<string> emails = new List<string>();
+                for(int i = 0; i < bookH.Count; i++)
+                {
+                    emails.Add(bookH[i].ApplicationUser.Email);
+                }
+                string subject = "Booking change";
+                string content = "The time change to " + booking.Time.ToString();
+                EmailSender es = new EmailSender();
+                es.SendBulk(emails, subject, content);
+
                 db.Entry(booking).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
