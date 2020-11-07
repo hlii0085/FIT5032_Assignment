@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Manage Hospital Page For Admin</h2>
 
 <canvas id="myChart" width="400" height="200"></canvas>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Hospitals", "Create")
 </p>
 <table class="table" id="datatable">
     <thead>
@@ -55,6 +55,9 @@
             </tr>
         }
     </tbody>
+    <p><a href="./Bookings/Index">View All the Booking</a></p>
+
+    <p><a href="./UserRoles/Index">Manage Users Role </a></p>
 </table>
 
 @section scripts{

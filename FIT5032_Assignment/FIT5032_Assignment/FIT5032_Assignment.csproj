@@ -226,6 +226,14 @@
     <Compile Include="Migrations\202011010428109_addValidation.Designer.cs">
       <DependentUpon>202011010428109_addValidation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011071232481_validationUpdate.cs" />
+    <Compile Include="Migrations\202011071232481_validationUpdate.Designer.cs">
+      <DependentUpon>202011071232481_validationUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011071502389_validateAdd.cs" />
+    <Compile Include="Migrations\202011071502389_validateAdd.Designer.cs">
+      <DependentUpon>202011071502389_validateAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookEvent.cs" />
@@ -236,6 +244,11 @@
     <Compile Include="Models\SendEmailViewModel.cs" />
     <Compile Include="Models\Story.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\EmailSender.cs" />
   </ItemGroup>
@@ -409,6 +422,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Resources\dontForget.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\DataTables\css\semanticui.scss" />
@@ -661,6 +675,8 @@
     <Content Include="Views\Hospitals\CustomerIndex.cshtml" />
     <Content Include="Views\Bookings\BookingByHospital.cshtml" />
     <Content Include="Views\BookEvents\Index.cshtml" />
+    <Content Include="Views\Manage\CustomerIndex.cshtml" />
+    <Content Include="Views\Bookings\CustomerBooking.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -708,6 +724,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011010428109_addValidation.resx">
       <DependentUpon>202011010428109_addValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011071232481_validationUpdate.resx">
+      <DependentUpon>202011071232481_validationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011071502389_validateAdd.resx">
+      <DependentUpon>202011071502389_validateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

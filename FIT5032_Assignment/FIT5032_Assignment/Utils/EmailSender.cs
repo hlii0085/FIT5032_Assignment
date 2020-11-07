@@ -1,9 +1,12 @@
-﻿using SendGrid;
+﻿using EllipticCurve.Utils;
+using SendGrid;
 using SendGrid.Helpers.Mail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.IO;
+using String = System.String;
 
 namespace FIT5032_Assignment.Utils
 {
@@ -21,6 +24,7 @@ namespace FIT5032_Assignment.Utils
             var plainTextContent = contents;
             var htmlContent = "<p>" + contents + "</p>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
             var response = client.SendEmailAsync(msg);
         }
 
@@ -37,6 +41,10 @@ namespace FIT5032_Assignment.Utils
             var plainTextContent = contents;
             var htmlContent = "<p>" + contents + "</p>";
             var msg = MailHelper.CreateSingleEmailToMultipleRecipients(from, to, subject, plainTextContent, htmlContent);
+            string path = HttpContext.Current.Server.MapPath("~/Resources/dontForget.PNG");
+            var bytes = System.IO.File.ReadAllBytes(path);
+            var attachFile = Convert.ToBase64String(bytes);
+            msg.AddAttachment("dontForget.PNG", attachFile);
             var response = client.SendEmailAsync(msg);
         }
     }

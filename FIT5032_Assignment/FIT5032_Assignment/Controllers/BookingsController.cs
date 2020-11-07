@@ -19,8 +19,23 @@ namespace FIT5032_Assignment.Controllers
         public ActionResult Index()
         {
             var bookings = db.Bookings.Include(b => b.Hospital);
-            return View(bookings.ToList());
+            if (User.IsInRole("Admin"))
+            {
+                return View("Index", bookings.ToList());
+            }
+            else
+            {
+                return View("CustomerBooking", bookings.ToList());
+            }
+
         }
+
+        
+        //public ActionResult Index()
+        //{
+        //    var bookings = db.Bookings.Include(b => b.Hospital);
+        //    return View(bookings.ToList());
+        //}
 
         // GET: Bookings/Details/5
         public ActionResult Details(int? id)

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FIT5032_Assignment.Models.Booking>
+@{
+    ViewBag.Title = "CustomerBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Booking</h2>
+
+<table class="table" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Hospital.HospitalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hospital.HospitalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#datatable").dataTable();
+        })
+    </script>
+}
+

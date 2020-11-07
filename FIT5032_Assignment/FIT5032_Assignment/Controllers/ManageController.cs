@@ -20,6 +20,7 @@ namespace FIT5032_Assignment.Controllers
         {
         }
 
+
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
@@ -49,6 +50,7 @@ namespace FIT5032_Assignment.Controllers
                 _userManager = value;
             }
         }
+
 
         //
         // GET: /Manage/Index

@@ -6,7 +6,7 @@
     var hospital = ViewBag.hospital;
 }
 
-<h2>BookingByHospital</h2>
+<h2>Booking By Hospital</h2>
 
 <div class="row">
     <div class="col-md-9" id="calendar"></div>
@@ -19,9 +19,9 @@
 </div>
 
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
             </td>
         </tr>
     }

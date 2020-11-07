@@ -229,3 +229,6 @@ C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assign
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\SendGrid.pdb
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\bin\SendGrid.xml
 C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.addValidation.resources
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.validationUpdate.resources
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Migrations.validateAdd.resources
+C:\Users\Haoxing Li\Desktop\FIT5032_Assignment\FIT5032_Assignment\FIT5032_Assignment\obj\Debug\FIT5032_Assignment.Properties.Resources.resources
