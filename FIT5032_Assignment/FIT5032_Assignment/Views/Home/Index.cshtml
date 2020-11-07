@@ -2,31 +2,49 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <img src="https://p1.pxfuel.com/preview/233/266/532/mental-health-mental-wellness-mind-mindfulness.jpg" />
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<head>
+    <style>
+        #xuanchuan{
+            width: 100%;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        .bt{
+            text-align:center;
+        }
+
+        .des{
+            font-size: 18px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-12">
+        <img id="xuanchuan" src="https://p1.pxfuel.com/preview/233/266/532/mental-health-mental-wellness-mind-mindfulness.jpg" />
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Know more about mental health</h2>
+            <p class="des">
+                Do you want to know more about mental health? Click Learn more below.
+            </p>
+            <p class="bt"><a class="btn btn-default" href="./Home/About">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Hospital</h2>
+            <p class="des">Do you want to know more about which hospital can treat mental health issue and the details of hopsitals? Click know more below.</p>
+            <p class="bt"><a class="btn btn-default" href="./Hospitals/Index">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Hospital Booking</h2>
+            <p class="des">Do you want to book a hospital? Click know more below.</p>
+            <p class="bt"><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>
