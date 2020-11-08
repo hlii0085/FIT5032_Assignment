@@ -677,6 +677,8 @@
     <Content Include="Views\BookEvents\Index.cshtml" />
     <Content Include="Views\Manage\CustomerIndex.cshtml" />
     <Content Include="Views\Bookings\CustomerBooking.cshtml" />
+    <Content Include="Views\BookEvents\Booked.cshtml" />
+    <Content Include="Views\BookEvents\Conflict.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -29,6 +29,7 @@
                     @Html.DisplayFor(modelItem => item.Time)
                 </td>
                 <td>
+                    @Html.ActionLink("Booking this hospital by calendar", "BookingByHospital", "Bookings", new { id = item.Hospital.Id }, htmlAttributes: new { @class = "btn btn-default" })
                 </td>
             </tr>
         }

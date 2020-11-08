@@ -11,22 +11,36 @@
     @*@Html.ActionLink("Manage User Role", "ManageUserRoles")*@
 </p>
 
-<table class="table">
-    <tr>
-        <th>Role Name</th>
-        <th>Option</th>
-    </tr>
-
-    @foreach (var role in Model)
-    {
+<table class="table" id="datatable">
+    <thead>
         <tr>
-            <td>
-                @role.Name
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { roleName = role.Name }) |
-                @Html.ActionLink("Delete", "Delete", new { roleName = role.Name })
-            </td>
+            <th>Role Name</th>
+            <th>Option</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var role in Model)
+        {
+            <tr>
+                <td>
+                    @role.Name
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { roleName = role.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { roleName = role.Name })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    
 </table>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#datatable").dataTable();
+        })
+    </script>
+}
+
